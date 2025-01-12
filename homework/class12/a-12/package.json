@@ -1,0 +1,15 @@
+{
+  "name": "a-12",
+  "type" : "module",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "cgnode": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
