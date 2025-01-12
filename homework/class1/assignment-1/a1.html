@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .container{
+            max-width: 80%;
+            margin: 0 auto;
+       
+            
+        }
+        h1{
+            text-align: center;
+        }
+        .student{
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            padding-left: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        
+        }
+        
+       
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Students Report</h1>
+        <div class="studentslist" id="studentslist"></div>
+    </div>
+
+
+
+    <script>
+       
+       const students = [
+        {name : "Ali" , marks : "80"},
+        {name : "Hafsa" , marks : "57"},
+        {name : "Ismail" , marks : "91"},
+        {name : "Asad" , marks : "74"},
+        {name : "Zehra" , marks : "95"}
+       ];
+
+       function gradesCalculator(marks){
+        if(marks >= 90) return "A+";
+        else if(marks >= 80 && marks < 90) return "A";
+        else if(marks >= 70 && marks < 80) return "B";
+        else if(marks >= 60 && marks < 70) return "C";
+        else if(marks >= 50 && marks < 60) return "D";
+        else if(marks >= 40 && marks < 50) return "E";
+        else if(marks < 40) return "F";
+       };
+
+    
+        let infolist = document.getElementById("studentslist");
+        infolist.innerHTML = " ";
+
+        students.forEach(student => {
+                const grade = gradesCalculator(student.marks);
+                const studentDiv = document.createElement("div");
+                studentDiv.classList.add("student");
+                studentDiv.innerHTML = `
+                    <p><strong><span style="color:blue;">Name:</strong> ${student.name}</p>
+                    <p><strong><span style="color:blue;">Marks:</strong> ${student.marks}</p>
+                    <p><strong><span style="color:blue;">Grade:</strong> ${grade}</p>
+                `;
+                infolist.appendChild(studentDiv);
+        });
+
+       
+    </script>
+</body>
+</html>

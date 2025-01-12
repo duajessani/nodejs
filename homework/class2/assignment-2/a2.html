@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Is Weekend Or Not</h1>
+        <h2>Enter the day..</h2>
+        <input type="text" id="day">
+        <button onclick="IsWeekDay()">Search -></button>
+        <div id="ans"></div>
+    </div>
+
+
+    <script>
+        ansDiv = document.getElementById("ans");
+        function IsWeekDay(){
+            ansDiv.innerHTML = "";
+            let day = document.getElementById("day").value;
+            let lowerday= day.toLowerCase();
+            if(lowerday == "saturday"|| lowerday =="sunday"){
+                ansDiv.innerHTML = "It's Weekend !! Enjoy ";
+                return false;
+            }
+            else if(lowerday == "monday"||lowerday == "tuesday"||lowerday == "wednesday"||lowerday == "thursday"||lowerday == "friday"){
+                ansDiv.innerHTML = "It's a Weekday !! ";
+                return true;
+            }
+            else{
+                ansDiv.innerHTML = "Invalid Input";
+            }
+           
+        }
+    </script>
+</body>
+</html>
