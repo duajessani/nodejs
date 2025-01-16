@@ -1,0 +1,22 @@
+{
+  "name": "a14",
+  "type" : "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cgnode": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0"
+  }
+}
