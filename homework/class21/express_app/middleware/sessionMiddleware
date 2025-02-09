@@ -1,0 +1,5 @@
+module.exports = (req, res, next) => { //loggedin user can access
+    if (req.session.user || req.path === '/login' || req.path === '/logout') {
+        return next(); // Allow login/logout
+    }
+};
